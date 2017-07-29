@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import pub.devrel.easypermissions.EasyPermissions;
 
+
 public class HomeActivity extends Activity {
 
     private Context mContext;
