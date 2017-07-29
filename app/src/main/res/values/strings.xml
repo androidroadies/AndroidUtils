@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <string name="app_name">Utils Example</string>
     <string name="hello_world">Hello world!</string>
@@ -158,4 +158,102 @@
     <string name="toast_short">Short</string>
     <string name="toast_long">Long</string>
 
+    <string name="pls_wait">Please wait…</string>
+
+    <!-- Error Messages -->
+    <string name="error_name_msg_blank">Please enter your name</string>
+    <string name="error_email_msg_blank">Please enter an email id</string>
+    <string name="error_password_msg_blank">Please enter a password</string>
+    <string name="error_email_msg">Please enter a valid email id</string>
+    <string name="error_password_msg">Please enter valid password</string>
+    <string name="error_username_msg_blank">Please enter your username</string>
+    <string name="error_address_msg_blank">Please enter your address</string>
+    <string name="error_zip_msg_blank">Please enter your zip/post code</string>
+    <string name="error_phone_blank">Please enter your phone number</string>
+    <string name="error_password_msg_min_max">Password must be of minimum 8 characters</string>
+    <string name="error_name_msg_min_max">Name must have more than 2 and less than 50 characters</string>
+    <string name="error_confirm_password_not_match">Confirm password and password do not match</string>
+    <string name="error_confirm_password_empty">Please enter a confirm password</string>
+    <string name="error_network_connectivity">Make sure your device is connected to the internet</string>
+    <string name="error_something_went_wrong">Oops! Something went wrong</string>
+    <string name="error_no_share_link">No share link available for this city</string>
+    <string name="error_desc_empty">Please enter description</string>
+    <string name="error_qty_empty">Please enter *</string>
+    <string name="error_price_empty">Please enter unit price</string>
+    <string name="error_total_price_empty">Please enter total price</string>
+    <string name="error_grab_code">Please enter code</string>
+
+    <string name="record_video">Record Video</string>
+    <string name="capture_image">Capture Image</string>
+    <string name="send_media">Send Media</string>
+    <string name="select_media_via">Select Media Via</string>
+    <string name="attach_via">Attach Via</string>
+    <string name="error_no_decoder">This device does not provide a decoder for <xliff:g id="mime_type">%1$s</xliff:g></string>
+    <string name="error_no_secure_decoder">This device does not provide a secure decoder for <xliff:g id="mime_type">%1$s</xliff:g></string>
+    <string name="error_querying_decoders">Unable to query device decoders</string>
+    <string name="error_instantiating_decoder">Unable to instantiate decoder <xliff:g id="decoder_name">%1$s</xliff:g></string>
+
+    <!--Chat Menu option-->
+    <string name="str_chat_menu_camera">Camera</string>
+    <string name="str_chat_menu_image">Image</string>
+    <string name="str_chat_menu_video">Video</string>
+    <string name="str_chat_menu_audio">Audio</string>
+    <string name="str_chat_menu_current_location">Location</string>
+
+    <string name="str_type_image_and_video">image/* video/*</string>
+    <string name="str_type_image">image/*</string>
+    <string name="str_type_video">video/*</string>
+    <string name="str_type_audio">audio/*</string>
+    <string name="str_select_option">Select Option</string>
+
+
+    <string name="str_gallery">Gallery</string>
+
+    <string name="chat_message">Type here</string>
+    <!-- Permissions -->
+    <string name="rationale_message_storage">Storage permission is needed to upload image for question</string>
+    <string name="rationale_message_storage_camera">Storage and Camera permissions are needed to upload image for question</string>
+
+    <string name="close">Close</string>
+    <string name="str_test_time">12:43</string>
+    <string name="str_test_username_one">Deals</string>
+    <string name="str_lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ex nulla, mattis in mi at, congue tincidunt lectus. Aenean viverra mauris tellus</string>
+    <string name="str_group_chat_attachment">Group Chat Attachment</string>
+    <string name="str_write_message">Write a Message…</string>
+
+    <string name="internal_storage">Internal storage</string>
+
+    <string name="bottom_sheet_select_image_using_choose">Choose</string>
+    <string name="bottom_sheet_select_image_using_camera">Camera</string>
+    <string name="bottom_sheet_select_image_using_gallery">Gallery</string>
+    <string name="title_settings_dialog">Oops !!!</string>
+    <string name="title_settings_button_setting">Settings</string>
+    <string name="title_settings_button_cancel">Cancel</string>
+    <string name="str_take_photos">Take Photo</string>
+    <string name="str_take_video">Take Video</string>
+    <string name="str_dollar_string">$%1$s</string>
+
+    <string name="default_title_for_image_video_upload">Select an option to choose image/video</string>
+    <string name="default_title_for_image_upload">Select an option to choose image</string>
+    <string name="default_title_for_video_upload">Select an option to choose video</string>
+    <string name="str_take_photos_video">Take Photo/Video</string>
+    <string name="location">Location</string>
+    <string name="trimming_progress">Trimming your video…</string>
+    <string name="short_seconds">sec</string>
+    <string name="megabyte">MB</string>
+    <string name="kilobyte">KB</string>
+    <string name="str_init_time">00:00</string>
+
+    <string name="api_google_key">AIzaSyDd-1ONLmTSHNBqgWXJBQU0ATTm6VQsGgQ</string> <!--Browser Key-->
+    <string name="api_server_key_google">AIzaSyCsJECxc_oX6b7HuxVGFBcEbJmHuW_agnY</string> <!--Server Key-->
+
+
+    <!--Cutstom Textview Fonts-->
+    <string-array name="montserrat">
+        <item>Montserrat-Light.ttf</item>
+        <item>Montserrat-Regular.otf</item> <!--Default: 1-->
+        <item>Montserrat-Medium.ttf</item>
+        <item>GoodDog.otf</item>
+    </string-array>
+    <string name="select_quantity">Quantity</string>
 </resources>

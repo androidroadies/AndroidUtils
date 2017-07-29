@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/regular_size"
+    android:background="@color/colorAccentTransparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/imageButtonCamera"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/mini_size"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:drawablePadding="@dimen/normal_size"
+                android:drawableTop="@drawable/ic_chat_bottom_camera"
+                android:padding="@dimen/mini_size"
+                android:text="@string/str_chat_menu_camera"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite" />
+
+            <Button
+                android:id="@+id/imageButtonGallery"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/mini_size"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:drawablePadding="@dimen/normal_size"
+                android:drawableTop="@drawable/ic_chat_picture"
+                android:padding="@dimen/mini_size"
+                android:text="@string/str_chat_menu_image"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/imageButtonVideo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/mini_size"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:drawablePadding="@dimen/normal_size"
+                android:drawableTop="@drawable/ic_chat_video"
+                android:padding="@dimen/mini_size"
+                android:text="@string/str_chat_menu_video"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite" />
+
+            <Button
+                android:id="@+id/imageButtonAudio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/mini_size"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:drawablePadding="@dimen/normal_size"
+                android:drawableTop="@drawable/ic_chat_audio"
+                android:padding="@dimen/mini_size"
+                android:text="@string/str_chat_menu_audio"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/imageButtonLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/mini_size"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:drawablePadding="@dimen/normal_size"
+                android:drawableTop="@drawable/ic_chat_location"
+                android:padding="@dimen/mini_size"
+                android:text="@string/str_chat_menu_current_location"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/str_chat_menu_image"
+                android:textAllCaps="false"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+        <com.common.views.CustomTextView
+            android:id="@+id/tvChooseMediaTitle"
+            style="@style/StyleTvMediumFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/default_title_for_image_video_upload"
+            android:textColor="@color/colorWhite"
+            />
+
+        <include layout="@layout/horizontal_line" />
+
+        <com.common.views.CustomTextView
+            android:id="@+id/tvChooseFromGallery"
+            style="@style/StyleTvMediumFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/str_gallery"
+            android:textColor="@color/colorWhite"
+             />
+
+        <com.common.views.CustomTextView
+            android:id="@+id/tvTakePicture"
+            style="@style/StyleTvMediumFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/str_take_photos"
+            android:textColor="@color/colorWhite"
+             />
+
+        <com.common.views.CustomTextView
+            android:id="@+id/tvTakeVideo"
+            style="@style/StyleTvMediumFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/str_take_video"
+            android:textColor="@color/colorWhite"
+             />
+
+        <com.common.views.CustomTextView
+            android:id="@+id/tvAudio"
+            style="@style/StyleTvMediumFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/str_chat_menu_audio"
+            android:textColor="@color/colorWhite"
+             />
+
+        <com.common.views.CustomTextView
+            android:id="@+id/tvLocation"
+            style="@style/StyleTvMediumFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/location"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone"
+             />
+
+        <com.common.views.CustomTextView
+            android:id="@+id/tvCancel"
+            style="@style/StyleTvMediumFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@android:string/cancel"
+            android:textColor="@color/colorPrimary"
+             />
+
+    </LinearLayout>
+</LinearLayout>

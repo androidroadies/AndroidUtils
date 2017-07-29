@@ -85,6 +85,13 @@
         <activity
             android:name=".MaterialView"
             android:screenOrientation="portrait"/>
+        <activity android:name="com.common.activity.TrimmerActivity" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/api_google_key" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/CropTheme" />
 
         <activity
             android:name=".CodeSnippestHomeActivity"

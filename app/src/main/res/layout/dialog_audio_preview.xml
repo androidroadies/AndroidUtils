@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:paddingBottom="@dimen/huge_size">
+
+    <LinearLayout
+        android:id="@+id/linerAudio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnImageClose"
+        android:layout_margin="@dimen/normal_size"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:id="@+id/progressBarBuffering"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:visibility="visible" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/img_audio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:src="@android:drawable/ic_media_play" />
+        </FrameLayout>
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" />
+
+
+    </LinearLayout>
+
+    <com.spotoffers.user.customviews.CustomTextView
+        android:id="@+id/tvAudioTimeCurrentDuration"
+        style="@style/StyleTvRegularFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linerAudio"
+        android:layout_marginLeft="@dimen/normal_size"
+        android:layout_marginStart="@dimen/normal_size"
+        android:gravity="center"
+        android:padding="@dimen/small_size"
+        android:text="@string/str_init_time" />
+
+    <com.spotoffers.user.customviews.CustomTextView
+        android:id="@+id/tvAudioTimeTotalDuration"
+        style="@style/StyleTvRegularFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/linerAudio"
+        android:layout_marginEnd="@dimen/normal_size"
+        android:layout_marginRight="@dimen/normal_size"
+        android:gravity="center"
+        android:padding="@dimen/small_size"
+        android:text="@string/str_init_time" />
+
+    <Button
+        android:id="@+id/btnImageClose"
+        style="@style/ButtonTransparent"
+        android:layout_width="70sp"
+        android:layout_height="30sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/normal_size"
+        android:text="@string/close"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/medium_size" />
+
+</RelativeLayout>

@@ -32,4 +32,230 @@
         <item name="android:textColor">@color/black</item>
     </style>
 
+    <style name="StyleDialog" parent="AppTheme" >
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="StyleTabLayout" parent="Widget.Design.TabLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_36sdp</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="tabMode">fixed</item>
+        <item name="tabPaddingStart">-2dp</item>
+        <item name="tabPaddingEnd">-2dp</item>
+        <item name="tabIndicatorHeight">0dp</item>
+        <item name="tabMaxWidth">0dp</item>
+        <item name="tabTextAppearance">@style/StyleTabLayoutText</item>
+    </style>
+
+    <style name="StyleTabLayoutText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="font">montserrat_regular</item>
+    </style>
+
+
+    <style name="StyleTabLayoutFavSetting" parent="Widget.Design.TabLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_36sdp</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="tabMode">fixed</item>
+        <item name="tabGravity">center</item>
+        <item name="tabPaddingStart">-2dp</item>
+        <item name="tabPaddingEnd">-2dp</item>
+        <item name="tabIndicatorHeight">0dp</item>
+        <item name="tabMaxWidth">0dp</item>
+        <item name="tabTextAppearance">@style/StyleTabLayoutTextFavSetting</item>
+    </style>
+
+    <style name="StyleTabLayoutTextFavSetting" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/_9sdp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="font">montserrat_regular</item>
+    </style>
+
+    <style name="DialogStyleChatPreview" parent="Base.Theme.AppCompat.Dialog">
+        <item name="android:windowMinWidthMajor">100%</item>
+        <item name="android:windowMinWidthMinor">100%</item>
+    </style>
+
+    <style name="ButtonTransparent">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/normal_size</item>
+    </style>
+
+    <!--<style name="TextViewSmallDark" parent="TextViewSmall">-->
+    <!--<item name="android:textColor">@color/colorPrimaryDark</item>-->
+    <!--</style>-->
+    <!-- TextView style-->
+    <style name="TextViewSmall">
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+
+    <!-- Common Button Style -->
+    <!--<style name="StyleAppButton">-->
+        <!--<item name="android:layout_width">@dimen/_240sdp</item>-->
+        <!--<item name="android:layout_height">@dimen/button_grab_height</item>-->
+        <!--<item name="android:layout_gravity">center_horizontal</item>-->
+        <!--<item name="android:textColor">@android:color/white</item>-->
+        <!--<item name="android:textSize">@dimen/text_size_regular</item>-->
+        <!--<item name="android:background">@drawable/ripple_button_primary</item>-->
+        <!--<item name="font">montserrat_regular</item>-->
+    <!--</style>-->
+
+    <!-- Common Rounded Corner Button Style -->
+    <!--<style name="StyleAppRoundedButton" parent="StyleAppButton">-->
+        <!--<item name="android:textColor">@color/colorPrimary</item>-->
+        <!--<item name="android:background">@drawable/rounded_corner_red</item>-->
+        <!--<item name="android:foreground">?attr/selectableItemBackground</item>-->
+    <!--</style>-->
+
+    <!-- Common Input Layout Style -->
+    <style name="StyleAppInputLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/small_size</item>
+        <item name="android:textColor">@color/colorSecondaryText</item>
+        <item name="hintTextAppearance">@style/TextLabel</item>
+    </style>
+
+    <style name="TextLabel" parent="TextAppearance.Design.Hint">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!-- Common EditText Style -->
+    <style name="StyleAppEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/small_size</item>
+        <item name="android:drawablePadding">@dimen/medium_size</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:textColorHint">@color/colorSecondaryText</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:background">@null</item>
+        <item name="android:lines">1</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:maxLength">50</item>
+        <item name="font">montserrat_regular</item>
+    </style>
+
+    <!--<style name="StyleAppFavourite">-->
+        <!--<item name="android:layout_width">@dimen/xx_large_size</item>-->
+        <!--<item name="android:layout_height">@dimen/xx_large_size</item>-->
+        <!--<item name="android:background">@drawable/selector_favourite_dark</item>-->
+        <!--<item name="android:padding">@dimen/small_size</item>-->
+        <!--<item name="android:textOn">""</item>-->
+        <!--<item name="android:textOff">""</item>-->
+        <!--<item name="android:button">@null</item>-->
+    <!--</style>-->
+
+
+    <!-- Common Style for LinearLayout containing EditText with drawable-->
+    <style name="StyleAppEdDrawableLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginStart">@dimen/small_size</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <!--&lt;!&ndash; Common Style for ImageView to be shown to left/start of the EditText&ndash;&gt;-->
+    <!--<style name="StyleAppEdDrawableImage">-->
+        <!--<item name="android:layout_width">@dimen/drawable_left_size</item>-->
+        <!--<item name="android:layout_height">@dimen/drawable_left_size</item>-->
+        <!--<item name="android:layout_marginTop">@dimen/mini_size</item>-->
+    <!--</style>-->
+
+    <!-- Common Style for Custom BACK arrow in dialog fragments-->
+    <!--<style name="StyleAppBackButton">-->
+        <!--<item name="android:layout_width">wrap_content</item>-->
+        <!--<item name="android:layout_height">wrap_content</item>-->
+        <!--<item name="android:scaleType">centerCrop</item>-->
+        <!--<item name="android:layout_marginStart">@dimen/tiny_size</item>-->
+        <!--<item name="android:layout_centerVertical">true</item>-->
+        <!--<item name="android:clickable">true</item>-->
+        <!--<item name="android:background">?attr/selectableItemBackgroundBorderless</item>-->
+        <!--<item name="android:src">@drawable/ic_back</item>-->
+    <!--</style>-->
+
+    <style name="ProgressDialogTheme">
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:windowSoftInputMode">stateAlwaysHidden</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="StyleTvLight">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorSecondaryText</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="StyleTvRegularFont" parent="StyleTvLight">
+        <item name="font">montserrat_regular</item>
+    </style>
+
+    <style name="StyleTvMediumFont" parent="StyleTvLight">
+        <item name="font">montserrat_bold</item>
+    </style>
+
+    <style name="StyleTvLightFont" parent="StyleTvLight">
+        <item name="font">montserrat_Light</item>
+    </style>
+
+    <style name="StyleTvLightSizeSmall" parent="StyleTvLight">
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="StyleTvLightSizeRegular" parent="StyleTvLight">
+        <item name="android:textSize">@dimen/text_size_regular</item>
+    </style>
+
+    <style name="StyleTvDark">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="StyleTvDarkSizeSmall" parent="StyleTvDark">
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="StyleTvDarkSizeRegular" parent="StyleTvDark">
+        <item name="android:textSize">@dimen/text_size_regular</item>
+    </style>
+
+    <style name="StyleTvDarkShade">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorTextDarkShade</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="StyleTvDarkShadeSizeSmall" parent="StyleTvDarkShade">
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="StyleTvDarkShadeSizeRegular" parent="StyleTvDarkShade">
+        <item name="android:textSize">@dimen/text_size_regular</item>
+    </style>
+    <style name="CropTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:windowBackground">@color/colorWhite</item>
+    </style>
 </resources>

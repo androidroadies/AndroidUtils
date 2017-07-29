@@ -6,20 +6,32 @@ import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.common.api.OkClientFactory;
+
+import okhttp3.OkHttpClient;
+
 public class BaseApplication extends Application {
 
     private static final String TAG = "BaseApplication";
 
     private static BaseApplication sInstance;
 
-    public static Context getInstance() {
-        return sInstance;
+//    public static Context getInstance() {
+//        return sInstance;
+//    }
+
+    private static BaseApplication mBaseApplication = null;
+    private static OkHttpClient mOkHttpClient;
+
+    public static BaseApplication getInstance() {
+        return mBaseApplication;
     }
 
     @Override
     public void onCreate() {
         super.onCreate();
         sInstance = this;
+        initializeOkHttpClient();
         registerActivityLifecycleCallbacks(mCallbacks);
     }
 
@@ -60,4 +72,14 @@ public class BaseApplication extends Application {
             Log.d(TAG, "onActivityDestroyed() called with: activity = [" + activity + "]");
         }
     };
+
+    // Initialize initializeOkHttpClient
+    private void initializeOkHttpClient() {
+        mBaseApplication = this;
+        mOkHttpClient = OkClientFactory.provideOkHttpClient(this);
+    }
+
+    public OkHttpClient getOkHttpClient() {
+        return mOkHttpClient;
+    }
 }

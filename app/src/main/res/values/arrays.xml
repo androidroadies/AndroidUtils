@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string-array name="sort_api_values">
+        <item>offer_price</item>
+        <item>points_needed</item>
+        <item>distance</item>
+        <item>popular_store</item>
+        <item>quantity_remains</item>
+        <item>o_original_view</item>
+        <item>redeem</item>
+        <item>offer_price</item>
+        <item>createdOn</item>
+        <item>discount</item>
+        <item>createdOn</item>
+    </string-array>
+
+    <string-array name="quote_sort_hints">
+        <item>@string/location</item>
+    </string-array>
+
+
+
+
+
+
+
+    <string-array name="array_quantity">
+        <item>@string/select_quantity</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+
+    <integer-array name="footer_tab_normal">
+        <item>@drawable/ic_tab_home</item> // Home
+        <item>@drawable/ic_tab_ood</item> // OOD
+        <item>@drawable/ic_tab_heart</item> // Favourite
+        <item>@drawable/ic_tab_store</item> // Mall/Store
+        <item>@drawable/ic_tab_quote</item> // Quotes
+        <item>@drawable/ic_tab_loyalty_offers</item> // Loyalty offers
+        <item>@drawable/ic_tab_watch</item> // watch list
+        <item>@drawable/ic_tab_featured</item> // featured offer
+        <item>@drawable/ic_tab_grabbed</item> // grabbed history
+    </integer-array>
+
+    <integer-array name="footer_tab_clicked">
+        <item>@drawable/ic_tab_home_clicked</item>
+        <item>@drawable/ic_tab_ood_clicked</item>
+        <item>@drawable/ic_tab_heart_clicked</item>
+        <item>@drawable/ic_tab_store_clicked</item>
+        <item>@drawable/ic_tab_quote_clicked</item>
+        <item>@drawable/ic_tab_loyalty_offers_clicked</item>
+        <item>@drawable/ic_tab_watch_clicked</item>
+        <item>@drawable/ic_tab_featured_clicked</item>
+        <item>@drawable/ic_tab_grabbed_click</item>
+    </integer-array>
+
+    <integer-array name="header_tab">
+        <item>@drawable/ic_category_fv</item> // Category
+        <item>@drawable/ic_tab_filter</item> // Filter
+        <item>@drawable/ic_location_fav</item> // Location
+        <item>@drawable/ic_tab_sort</item> // Sort By
+        <item>@drawable/ic_tab_map</item> // Map
+    </integer-array>
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <com.common.views.ZoomableImageView
+        android:id="@+id/ivPreviewImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@color/colorWhite"
+        android:contentDescription="@string/app_name" />
+
+    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+        android:id="@+id/video_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/progressBarBuffering"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:theme="@style/ProgressDialogTheme"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+    <ImageView
+        android:id="@+id/btnImageClose"
+        style="@style/ButtonTransparent"
+        android:layout_width="@dimen/regular_component_icon_size"
+        android:layout_height="@dimen/regular_component_icon_size"
+        android:padding="@dimen/tiny_size"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/regular_size"
+        android:src="@drawable/ic_close" />
+
+</RelativeLayout>

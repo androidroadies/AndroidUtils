@@ -14,4 +14,37 @@
 
     <dimen name="offset_64">64dp</dimen>
 
+    <!-- VIDEO TRIMMER-->
+    <dimen name="progress_video_line_height">2dp</dimen>
+    <dimen name="frames_video_height">40dip</dimen>
+    <!-- Common padding or margin size -->
+    <dimen name="tiny_size">@dimen/_2sdp</dimen>
+    <dimen name="mini_size">@dimen/_4sdp</dimen>
+    <dimen name="small_size">@dimen/_6sdp</dimen>
+    <dimen name="normal_size">@dimen/_8sdp</dimen>
+    <dimen name="medium_size">@dimen/_10sdp</dimen>
+    <dimen name="regular_size">@dimen/_12sdp</dimen>
+    <dimen name="large_size">@dimen/_14sdp</dimen>
+    <dimen name="x_large_size">@dimen/_16sdp</dimen>
+    <dimen name="xx_large_size">@dimen/_18sdp</dimen>
+    <dimen name="huge_size">@dimen/_20sdp</dimen>
+    <dimen name="x_huge_size">@dimen/_22sdp</dimen>
+    <dimen name="xx_huge_size">@dimen/_24sdp</dimen>
+
+    <dimen name="regular_component_icon_size">@dimen/_32sdp</dimen>
+    <!-- Common Text Size -->
+    <dimen name="chat_image_width">@dimen/_150sdp</dimen>
+    <dimen name="chat_image_height">@dimen/_90sdp</dimen>
+    <dimen name="text_size_mini">@dimen/_4sdp</dimen>
+    <dimen name="text_size_small">@dimen/_6sdp</dimen>
+    <dimen name="text_size_normal">@dimen/_8sdp</dimen>
+    <dimen name="text_size_medium">@dimen/_10sdp</dimen>
+    <dimen name="text_size_regular">@dimen/_12sdp</dimen>
+    <dimen name="text_size_large">@dimen/_14sdp</dimen>
+    <dimen name="text_size_x_large">@dimen/_16sdp</dimen>
+    <dimen name="text_size_xx_large">@dimen/_18sdp</dimen>
+    <dimen name="text_size_huge">@dimen/_20sdp</dimen>
+    <dimen name="text_size_x_huge">@dimen/_22sdp</dimen>
+    <dimen name="text_size_xx_huge">@dimen/_24sdp</dimen>
+
 </resources>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="@dimen/spacing_large"
+    android:orientation="vertical">
+
+    <com.common.views.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_normal"
+        android:layout_marginTop="@dimen/spacing_normal"
+        android:text="@string/attach_via"
+        android:textSize="@dimen/text_size_regular"/>
+
+    <LinearLayout
+        android:id="@+id/btn_bottom_sheet_select_image_using_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:padding="@dimen/spacing_small"
+        android:layout_marginTop="@dimen/normal_size"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/xx_huge_size"
+            android:layout_height="@dimen/xx_huge_size"
+            android:src="@drawable/ic_chat_bottom_gallery"/>
+
+        <com.common.views.CustomTextView
+            style="@style/StyleTvMediumFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/large_size"
+            android:text="@string/bottom_sheet_select_image_using_gallery"
+            android:textSize="@dimen/text_size_regular"
+            android:textColor="@color/colorPrimaryText"
+            android:textAllCaps="true"/>
+
+    </LinearLayout>
+
+    <!--<com.spotoffers.user.customviews.CustomAppCompatButton
+        android:id="@+id/btn_bottom_sheet_select_image_using_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_size"
+        android:background="?attr/selectableItemBackground"
+        android:drawablePadding="@dimen/spacing_normal"
+        android:drawableStart="@drawable/ic_chat"
+        android:gravity="center_vertical"
+        android:padding="@dimen/spacing_small"
+        android:text="@string/bottom_sheet_select_image_using_gallery" />-->
+
+    <LinearLayout
+        android:id="@+id/btn_bottom_sheet_select_image_using_camera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:padding="@dimen/spacing_small"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/xx_huge_size"
+            android:layout_height="@dimen/xx_huge_size"
+            android:src="@drawable/ic_chat_bottom_camera"/>
+
+        <com.common.views.CustomTextView
+            style="@style/StyleTvMediumFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/large_size"
+            android:text="@string/capture_image"
+            android:textSize="@dimen/text_size_regular"
+            android:textColor="@color/colorPrimaryText"
+            android:textAllCaps="true"/>
+
+    </LinearLayout>
+
+    <!--<com.spotoffers.user.customviews.CustomAppCompatButton
+        android:id="@+id/btn_bottom_sheet_select_image_using_camera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:drawablePadding="@dimen/spacing_normal"
+        android:drawableStart="@drawable/ic_chat"
+        android:gravity="center_vertical"
+        android:padding="@dimen/spacing_small"
+        android:text="@string/capture_image" />-->
+
+    <LinearLayout
+        android:id="@+id/btn_record_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:padding="@dimen/spacing_small"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/xx_huge_size"
+            android:layout_height="@dimen/xx_huge_size"
+            android:src="@drawable/ic_chat_bottom_video"/>
+
+        <com.common.views.CustomTextView
+            style="@style/StyleTvMediumFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/large_size"
+            android:text="@string/record_video"
+            android:textSize="@dimen/text_size_regular"
+            android:textColor="@color/colorPrimaryText"
+            android:textAllCaps="true"/>
+
+    </LinearLayout>
+
+    <!--<LinearLayout
+        android:id="@+id/ll_add_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/large_size"
+        android:background="?attr/selectableItemBackground"
+        android:padding="@dimen/spacing_small"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/xx_huge_size"
+            android:layout_height="@dimen/xx_huge_size"
+            android:tint="@color/colorPrimary"
+            android:src="@drawable/ic_chat_bottom_location"/>
+
+        <com.spotoffers.user.customviews.CustomTextView
+            style="@style/StyleTvMediumFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/large_size"
+            android:text="@string/location"
+            android:textSize="@dimen/text_size_regular"
+            android:textColor="@color/colorPrimaryText"
+            android:textAllCaps="true"/>
+
+    </LinearLayout>-->
+
+    <!--<com.spotoffers.user.customviews.CustomAppCompatButton
+        android:id="@+id/btn_record_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:drawablePadding="@dimen/spacing_normal"
+        android:drawableStart="@drawable/ic_chat"
+        android:gravity="center_vertical"
+        android:padding="@dimen/spacing_small"
+        android:text="@string/record_video" />-->
+
+</LinearLayout>
