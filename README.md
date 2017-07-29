@@ -728,7 +728,7 @@ Utils.init(context);
 [weibo]: http://weibo.com/3076228982
 
 [blogsvg]: https://img.shields.io/badge/Blog-androidroadies-brightgreen.svg
-[blog]: http://androidroadies.com
+[blog]: https://androidroadies.blogspot.in/
 
 [qq0groupsvg]: https://img.shields.io/badge/QQ0群(满)-74721490-fba7f9.svg
 [qq0group]: https://shang.qq.com/wpa/qunwpa?idkey=62baf2c3ec6b0863155b0c7a10c71bba2608cb0b6532fc18515835e54c69bdd3
@@ -736,112 +736,109 @@ Utils.init(context);
 [qq1groupsvg]: https://img.shields.io/badge/QQ1群-25206533-fba7f9.svg
 [qq1group]: https://shang.qq.com/wpa/qunwpa?idkey=d906789f84484465e2736f7b524366b4c23afeda38733d5c7b10fc3f6e406e9b
 
-[readme.md]: https://github.com/androidroadies/AndroidUtils
-[readme-cn.md]: https://github.com/androidroadies/AndroidUtils/blob/master/README-CN.md
+[activity.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/ActivityUtils.java
+[activity.demo]: https://github.com/androidroadies/AndroidUtils/blob/master/app/src/main/java/com/common/AndroidUtils/activity/ActivityActivity.java
 
-[activity.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/ActivityUtils.java
-[activity.demo]: https://github.com/androidroadies/AndroidUtils/blob/master/app/src/main/java/com/androidroadies/AndroidUtils/activity/ActivityActivity.java
+[app.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/AppUtils.java
+[app.demo]: https://github.com/androidroadies/AndroidUtils/blob/master/app/src/main/java/com/common/AndroidUtils/activity/AppActivity.java
 
-[app.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/AppUtils.java
-[app.demo]: https://github.com/androidroadies/AndroidUtils/blob/master/app/src/main/java/com/androidroadies/AndroidUtils/activity/AppActivity.java
+[bar.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/BarUtils.java
 
-[bar.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/BarUtils.java
+[clean.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/CleanUtils.java
+[clean.demo]: https://github.com/androidroadies/AndroidUtils/blob/master/app/src/main/java/com/common/AndroidUtils/activity/CleanActivity.java
 
-[clean.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/CleanUtils.java
-[clean.demo]: https://github.com/androidroadies/AndroidUtils/blob/master/app/src/main/java/com/androidroadies/AndroidUtils/activity/CleanActivity.java
+[clipboard.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/ClipboardUtils.java
 
-[clipboard.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/ClipboardUtils.java
+[close.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/CloseUtils.java
 
-[close.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/CloseUtils.java
+[convert.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/ConvertUtils.java
+[convert.test]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/test/java/com/common/utilcode/util/ConvertUtilsTest.java
 
-[convert.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/ConvertUtils.java
-[convert.test]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/test/java/com/androidroadies/utilcode/util/ConvertUtilsTest.java
+[crash.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/CrashUtils.java
 
-[crash.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/CrashUtils.java
-
-[device.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/DeviceUtils.java
+[device.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/DeviceUtils.java
 [device.demo]: https://github.com/androidroadies/AndroidUtils/blob/master/app/src/main/java/com/androidroadies/AndroidUtils/activity/DeviceActivity.java
 
-[empty.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/EmptyUtils.java
-[empty.test]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/test/java/com/androidroadies/utilcode/util/EmptyUtilsTest.java
+[empty.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/EmptyUtils.java
+[empty.test]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/test/java/com/common/utilcode/util/EmptyUtilsTest.java
 
-[encode.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/EncodeUtils.java
-[encode.test]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/test/java/com/androidroadies/utilcode/util/EncodeUtilsTest.java
+[encode.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/EncodeUtils.java
+[encode.test]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/test/java/com/common/utilcode/util/EncodeUtilsTest.java
 
-[encrypt.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/EncryptUtils.java
-[encrypt.test]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/test/java/com/androidroadies/utilcode/util/EncryptUtilsTest.java
+[encrypt.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/EncryptUtils.java
+[encrypt.test]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/test/java/com/common/utilcode/util/EncryptUtilsTest.java
 
-[file.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/FileUtils.java
-[file.test]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/test/java/com/androidroadies/utilcode/util/FileUtilsTest.java
+[file.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/FileUtils.java
+[file.test]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/test/java/com/common/utilcode/util/FileUtilsTest.java
 
-[fragment.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/FragmentUtils.java
+[fragment.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/FragmentUtils.java
 [fragment.demo]: https://github.com/androidroadies/AndroidUtils/blob/master/app/src/main/java/com/androidroadies/AndroidUtils/activity/FragmentActivity.java
 
-[handler.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/HandlerUtils.java
+[handler.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/HandlerUtils.java
 [handler.demo]: https://github.com/androidroadies/AndroidUtils/blob/master/app/src/main/java/com/androidroadies/AndroidUtils/activity/HandlerActivity.java
 
-[image.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/ImageUtils.java
+[image.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/ImageUtils.java
 [image.demo]: https://github.com/androidroadies/AndroidUtils/blob/master/app/src/main/java/com/androidroadies/AndroidUtils/activity/ImageActivity.java
 
-[intent.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/IntentUtils.java
+[intent.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/IntentUtils.java
 
-[keyboard.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/KeyboardUtils.java
+[keyboard.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/KeyboardUtils.java
 [keyboard.demo]: https://github.com/androidroadies/AndroidUtils/blob/master/app/src/main/java/com/androidroadies/AndroidUtils/activity/KeyboardActivity.java
 
-[location.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/LocationUtils.java
-[location.demo]: https://github.com/androidroadies/AndroidUtils/blob/master/app/src/main/java/com/androidroadies/AndroidUtils/activity/LocationActivity.java
+[location.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/LocationUtils.java
+[location.demo]: https://github.com/androidroadies/AndroidUtils/blob/master/app/src/main/java/com/common/AndroidUtils/activity/LocationActivity.java
 
-[log.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/LogUtils.java
-[log.demo]: https://github.com/androidroadies/AndroidUtils/blob/master/app/src/main/java/com/androidroadies/AndroidUtils/activity/LogActivity.java
+[log.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/LogUtils.java
+[log.demo]: https://github.com/androidroadies/AndroidUtils/blob/master/app/src/main/java/com/common/AndroidUtils/activity/LogActivity.java
 
-[network.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/NetworkUtils.java
-[network.demo]: https://github.com/androidroadies/AndroidUtils/blob/master/app/src/main/java/com/androidroadies/AndroidUtils/activity/NetworkActivity.java
+[network.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/NetworkUtils.java
+[network.demo]: https://github.com/androidroadies/AndroidUtils/blob/master/app/src/main/java/com/common/AndroidUtils/activity/NetworkActivity.java
 
-[phone.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/PhoneUtils.java
-[phone.demo]: https://github.com/androidroadies/AndroidUtils/blob/master/app/src/main/java/com/androidroadies/AndroidUtils/activity/PhoneActivity.java
+[phone.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/PhoneUtils.java
+[phone.demo]: https://github.com/androidroadies/AndroidUtils/blob/master/app/src/main/java/com/common/AndroidUtils/activity/PhoneActivity.java
 
-[pinyin.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/PinyinUtils.java
-[pinyin.test]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/test/java/com/androidroadies/utilcode/util/PinyinUtilsTest.java
+[pinyin.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/PinyinUtils.java
+[pinyin.test]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/test/java/com/common/utilcode/util/PinyinUtilsTest.java
 
-[process.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/ProcessUtils.java
+[process.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/ProcessUtils.java
 [process.demo]: https://github.com/androidroadies/AndroidUtils/blob/master/app/src/main/java/com/androidroadies/AndroidUtils/activity/ProcessActivity.java
 
-[regex.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/RegexUtils.java
-[regex.test]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/test/java/com/androidroadies/utilcode/util/RegexUtilsTest.java
+[regex.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/RegexUtils.java
+[regex.test]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/test/java/com/common/utilcode/util/RegexUtilsTest.java
 
-[screen.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/ScreenUtils.java
+[screen.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/ScreenUtils.java
 
-[sdcard.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/SDCardUtils.java
+[sdcard.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/SDCardUtils.java
 [sdcard.demo]: https://github.com/androidroadies/AndroidUtils/blob/master/app/src/main/java/com/androidroadies/AndroidUtils/activity/SDCardActivity.java
 
-[service.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/ServiceUtils.java
+[service.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/ServiceUtils.java
 
-[shell.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/ShellUtils.java
+[shell.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/ShellUtils.java
 
-[size.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/SizeUtils.java
+[size.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/SizeUtils.java
 
-[snackbar.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/SnackbarUtils.java
+[snackbar.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/SnackbarUtils.java
 [snackbar.demo]: https://github.com/androidroadies/AndroidUtils/blob/master/app/src/main/java/com/androidroadies/AndroidUtils/activity/SnackbarActivity.java
 
-[spannable.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/SpannableStringUtils.java
+[spannable.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/SpannableStringUtils.java
 [spannable.demo]: https://github.com/androidroadies/AndroidUtils/blob/master/app/src/main/java/com/androidroadies/AndroidUtils/activity/SpannableActivity.java
 
-[sp.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/SPUtils.java
-[sp.test]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/test/java/com/androidroadies/utilcode/util/SPUtilsTest.java
+[sp.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/SPUtils.java
+[sp.test]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/test/java/com/common/utilcode/util/SPUtilsTest.java
 
-[string.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/StringUtils.java
-[string.test]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/test/java/com/androidroadies/utilcode/util/StringUtilsTest.java
+[string.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/StringUtils.java
+[string.test]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/test/java/com/common/utilcode/util/StringUtilsTest.java
 
-[thread_pool.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/ThreadPoolUtils.java
+[thread_pool.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/ThreadPoolUtils.java
 
-[time.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/TimeUtils.java
-[time.test]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/test/java/com/androidroadies/utilcode/util/TimeUtilsTest.java
+[time.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/TimeUtils.java
+[time.test]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/test/java/com/common/utilcode/util/TimeUtilsTest.java
 
-[toast.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/ToastUtils.java
+[toast.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/ToastUtils.java
 [toast.demo]: https://github.com/androidroadies/AndroidUtils/blob/master/app/src/main/java/com/androidroadies/AndroidUtils/activity/ToastActivity.java
 
-[zip.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/androidroadies/utilcode/util/ZipUtils.java
-[zip.test]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/test/java/com/androidroadies/utilcode/util/ZipUtilsTest.java
+[zip.java]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/main/java/com/common/utilcode/util/ZipUtils.java
+[zip.test]: https://github.com/androidroadies/AndroidUtils/blob/master/utilcode/src/test/java/com/common/utilcode/util/ZipUtilsTest.java
 
 [update_log.md]: https://github.com/androidroadies/AndroidUtils/blob/master/update_log.md
 
