@@ -672,25 +672,6 @@ getComments
 getEntries
 ```
 
-* ### About Log→[update_log.md][update_log.md]**
-
-***
-
-## About
-
-* [![jianshu][jianshusvg]][jianshu] [![weibo][weibosvg]][weibo]  [![Blog][blogsvg]][blog] [![QQ0Group][qq0groupsvg]][qq0group] [![QQ1Group][qq1groupsvg]][qq1group]
-
-* **I'm so sorry for that the code is annotated with Chinese.**
-
-
-## Download
-
-Gradle:
-``` groovy
-compile 'com.androidroadies:utilcode:1.5.1'
-```
-
-
 ## How to use
 
 ```
@@ -706,8 +687,6 @@ Utils.init(context);
 -keepclassmembers class com.common.utilcode.** { *; }
 -dontwarn com.common.utilcode.**
 ```
-
-
 
 [aucsvg]: https://img.shields.io/badge/AndroidUtils-v1.5.1-brightgreen.svg
 [auc]: https://github.com/androidroadies/AndroidUtils
