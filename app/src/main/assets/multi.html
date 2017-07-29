@@ -1,0 +1,105 @@
+<div dir="ltr" style="text-align: left;" trbidi="on">
+<pre style="background-color: white; color: black; font-family: 'Courier New'; font-size: 9.0pt;"><span style="color: grey; font-style: italic;">/**</span><span style="color: grey; font-style: italic;"> * This is used for post data from API.</span><span style="color: grey; font-style: italic;"> *</span><span style="color: grey; font-style: italic;"> * </span><span style="color: grey; font-style: italic; font-weight: bold;">@author </span><span style="color: grey; font-style: italic;">Mayank</span><span style="color: grey; font-style: italic;"> * </span><span style="color: grey; font-style: italic; font-weight: bold;">@since </span><span style="color: grey; font-style: italic;">1.4</span><span style="color: grey; font-style: italic;"> */</span></pre>
+<pre style="background-color: white; color: black; font-family: 'Courier New'; font-size: 9.0pt;"><span style="color: grey; font-style: italic;">&nbsp;</span><span style="color: navy; font-weight: bold;">public class </span>MyClientMultipartPost <span style="color: navy; font-weight: bold;">extends </span>AsyncTask&lt;Void, Void, Void&gt; {
+
+    <span style="color: navy; font-weight: bold;">private final </span>String <span style="color: #660e7a; font-weight: bold;">ApiLink</span>;
+    <span style="color: navy; font-weight: bold;">private final </span>MultipartEntity <span style="color: #660e7a; font-weight: bold;">multipartentity</span>;
+    <span style="color: navy; font-weight: bold;">public </span>ProgressDialog <span style="color: #660e7a; font-weight: bold;">dialog</span>;
+    <span style="color: navy; font-weight: bold;">private </span>String <span style="color: #660e7a; font-weight: bold;">message</span>;
+    <span style="color: navy; font-weight: bold;">private </span>Context <span style="color: #660e7a; font-weight: bold;">context</span>;
+    <span style="color: navy; font-weight: bold;">private </span>OnPostCallComplete <span style="color: #660e7a; font-weight: bold;">onpostcallcomplete</span>;
+    <span style="color: navy; font-weight: bold;">private </span>JSONObject <span style="color: #660e7a; font-weight: bold;">jsonResult</span>;
+    <span style="color: navy; font-weight: bold;">private </span>String <span style="color: #660e7a; font-weight: bold;">json</span>;
+
+    <span style="color: navy; font-weight: bold;">public </span>MyClientMultipartPost(Context context, String progressMessage,
+                                 OnPostCallComplete onPostCallComplete2, String ApiLink,
+                                 MultipartEntity multipartentity) {
+        <span style="color: #660e7a; font-weight: bold;">message </span>= progressMessage;
+        <span style="color: navy; font-weight: bold;">this</span>.<span style="color: #660e7a; font-weight: bold;">context </span>= context;
+        <span style="color: navy; font-weight: bold;">this</span>.<span style="color: #660e7a; font-weight: bold;">ApiLink </span>= ApiLink;
+        <span style="color: navy; font-weight: bold;">this</span>.<span style="color: #660e7a; font-weight: bold;">multipartentity </span>= multipartentity;
+        <span style="color: navy; font-weight: bold;">this</span>.<span style="color: #660e7a; font-weight: bold;">onpostcallcomplete </span>= onPostCallComplete2;
+
+        <span style="color: navy; font-weight: bold;">if </span>(!(<span style="color: #660e7a; font-weight: bold;">message</span>.equals(<span style="color: green; font-weight: bold;">""</span>))) {
+            <span style="color: #660e7a; font-weight: bold;">dialog </span>= <span style="color: navy; font-weight: bold;">new </span>ProgressDialog(context);
+            <span style="color: #660e7a; font-weight: bold;">dialog</span>.setMessage(progressMessage);
+        }
+    }
+
+    <span style="color: olive;">@Override</span><span style="color: olive;">    </span><span style="color: navy; font-weight: bold;">protected void </span>onPreExecute() {
+        <span style="color: grey; font-style: italic;">// </span><span style="color: #0073bf; font-style: italic; font-weight: bold;">TODO Auto-generated method stub</span><span style="color: #0073bf; font-style: italic; font-weight: bold;">        </span><span style="color: navy; font-weight: bold;">super</span>.onPreExecute();
+        <span style="color: navy; font-weight: bold;">if </span>(!(<span style="color: #660e7a; font-weight: bold;">message</span>.equals(<span style="color: green; font-weight: bold;">""</span>))) {
+            <span style="color: #660e7a; font-weight: bold;">dialog</span>.setCancelable(<span style="color: navy; font-weight: bold;">false</span>);
+            <span style="color: #660e7a; font-weight: bold;">dialog</span>.show();
+        }
+    }
+
+    <span style="color: olive;">@Override</span><span style="color: olive;">    </span><span style="color: navy; font-weight: bold;">protected </span>Void doInBackground(Void... params) {
+        String result = <span style="color: navy; font-weight: bold;">null</span>;
+
+        <span style="color: navy; font-weight: bold;">if </span>(!isCancelled()) {
+
+            InputStream is = <span style="color: navy; font-weight: bold;">null</span>;
+            JSONObject jObj = <span style="color: navy; font-weight: bold;">null</span>;
+
+<span style="color: grey; font-style: italic;">//            Utils.Log(getClass().getSimpleName(), "Url : " + ApiLink + " Params : " +</span></pre>
+<pre style="background-color: white; color: black; font-family: 'Courier New'; font-size: 9.0pt;"><span style="color: grey; font-style: italic;">&nbsp;multipartentity.toString());</span><span style="color: grey; font-style: italic;">            </span>System.<span style="color: #660e7a; font-style: italic; font-weight: bold;">out</span>.println(<span style="color: green; font-weight: bold;">"create poll data " </span>+ <span style="color: #660e7a; font-weight: bold;">ApiLink</span>);
+            <span style="color: navy; font-weight: bold;">try </span>{
+                HttpClient httpclient = <span style="color: navy; font-weight: bold;">new </span>DefaultHttpClient();
+                HttpContext localContext = <span style="color: navy; font-weight: bold;">new </span>BasicHttpContext();
+                HttpPost httppost = <span style="color: navy; font-weight: bold;">new </span>HttpPost(<span style="color: #660e7a; font-weight: bold;">ApiLink</span>);
+                httppost.setEntity(<span style="color: #660e7a; font-weight: bold;">multipartentity</span>);
+
+                HttpResponse response = httpclient.execute(httppost, localContext);
+                <span style="color: navy; font-weight: bold;">if </span>(response == <span style="color: navy; font-weight: bold;">null</span>) {
+
+                } <span style="color: navy; font-weight: bold;">else </span>{
+                    HttpEntity entity = response.getEntity();
+                    is = entity.getContent();
+
+                    <span style="color: grey; font-style: italic;">// Log.e("log_tag", ""+is.toString());</span><span style="color: grey; font-style: italic;">                </span>}
+            } <span style="color: navy; font-weight: bold;">catch </span>(Exception e) {
+                e.printStackTrace();
+                <span style="color: grey; font-style: italic;">// Log.e("log_tag", "Error in http connection " + e.toString());</span><span style="color: grey; font-style: italic;">&nbsp;</span></pre>
+<pre style="background-color: white; color: black; font-family: 'Courier New'; font-size: 9.0pt;"><span style="color: grey; font-style: italic;">&nbsp;</span>}
+
+            <span style="color: grey; font-style: italic;">// convert response to string</span><span style="color: grey; font-style: italic;">            </span><span style="color: navy; font-weight: bold;">try </span>{
+                BufferedReader reader = <span style="color: navy; font-weight: bold;">new </span>BufferedReader(<span style="color: navy; font-weight: bold;">new </span>InputStreamReader</pre>
+<pre style="background-color: white; color: black; font-family: 'Courier New'; font-size: 9.0pt;">(is, <span style="color: green; font-weight: bold;">"iso-8859-1"</span>), <span style="color: blue;">8</span>);
+                StringBuilder sb = <span style="color: navy; font-weight: bold;">new </span>StringBuilder();
+                String line = <span style="color: navy; font-weight: bold;">null</span>;
+                <span style="color: navy; font-weight: bold;">while </span>((line = reader.readLine()) != <span style="color: navy; font-weight: bold;">null</span>) {
+                    sb.append(line + <span style="color: green; font-weight: bold;">"</span><span style="color: navy; font-weight: bold;">\n</span><span style="color: green; font-weight: bold;">"</span>);
+                }
+                is.close();
+                <span style="color: #660e7a; font-weight: bold;">json </span>= sb.toString();
+                Log.<span style="font-style: italic;">i</span>(<span style="color: green; font-weight: bold;">"res"</span>, <span style="color: #660e7a; font-weight: bold;">json</span>);
+            } <span style="color: navy; font-weight: bold;">catch </span>(Exception e) {
+                <span style="color: grey; font-style: italic;">// Log.e("log_tag", "Error converting result " + e.toString());</span><span style="color: grey; font-style: italic;">&nbsp;</span></pre>
+<pre style="background-color: white; color: black; font-family: 'Courier New'; font-size: 9.0pt;"><span style="color: grey; font-style: italic;">&nbsp;</span>e.printStackTrace();
+            }
+        }
+        <span style="color: grey; font-style: italic;">//System.out.println("result in post: "+result);</span><span style="color: grey; font-style: italic;">        </span><span style="color: navy; font-weight: bold;">return null</span>;
+    }
+
+    <span style="color: olive;">@Override</span><span style="color: olive;">    </span><span style="color: navy; font-weight: bold;">protected void </span>onPostExecute(Void result) {
+        <span style="color: grey; font-style: italic;">// </span><span style="color: #0073bf; font-style: italic; font-weight: bold;">TODO Auto-generated method stub</span><span style="color: #0073bf; font-style: italic; font-weight: bold;">        </span><span style="color: navy; font-weight: bold;">super</span>.onPostExecute(result);
+        <span style="color: navy; font-weight: bold;">if </span>(!(<span style="color: #660e7a; font-weight: bold;">message</span>.equals(<span style="color: green; font-weight: bold;">""</span>))) {
+            <span style="color: navy; font-weight: bold;">if </span>(<span style="color: #660e7a; font-weight: bold;">dialog </span>!= <span style="color: navy; font-weight: bold;">null</span>) {
+                <span style="color: #660e7a; font-weight: bold;">dialog</span>.hide();
+                <span style="color: #660e7a; font-weight: bold;">dialog</span>.dismiss();
+            }
+        }
+        System.<span style="color: #660e7a; font-style: italic; font-weight: bold;">out</span>.println(<span style="color: green; font-weight: bold;">"result in onPostExecute: " </span>+ result);
+        <span style="color: navy; font-weight: bold;">try </span>{
+            <span style="color: #660e7a; font-weight: bold;">onpostcallcomplete</span>.response(<span style="color: #660e7a; font-weight: bold;">json</span>);
+        } <span style="color: navy; font-weight: bold;">catch </span>(JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    <span style="color: navy; font-weight: bold;">public interface </span>OnPostCallComplete {
+        <span style="color: navy; font-weight: bold;">public void </span>response(String result) <span style="color: navy; font-weight: bold;">throws </span>JSONException;
+    }
+}</pre>
+</div>

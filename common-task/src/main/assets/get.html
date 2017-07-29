@@ -1,0 +1,57 @@
+<div dir="ltr" style="text-align: left;" trbidi="on">
+<pre style="background-color: white; color: black; font-family: 'Courier New'; font-size: 9.0pt;"><span style="color: grey; font-style: italic;">/**</span><span style="color: grey; font-style: italic;"> * This is used for get data from API.</span><span style="color: grey; font-style: italic;"> *</span><span style="color: grey; font-style: italic;">&nbsp;</span></pre>
+<pre style="background-color: white; color: black; font-family: 'Courier New'; font-size: 9.0pt;"><span style="color: grey; font-style: italic;">&nbsp;* </span><span style="color: grey; font-style: italic; font-weight: bold;">@author </span><span style="color: grey; font-style: italic;">Mayank</span><span style="color: grey; font-style: italic;"> * </span><span style="color: grey; font-style: italic; font-weight: bold;">@since </span><span style="color: grey; font-style: italic;">1.4</span><span style="color: grey; font-style: italic;"> */</span></pre>
+<pre style="background-color: white; color: black; font-family: 'Courier New'; font-size: 9.0pt;"><span style="color: grey; font-style: italic;">&nbsp;</span><span style="color: navy; font-weight: bold;">public class </span>MyClientGet <span style="color: navy; font-weight: bold;">extends </span>AsyncTask&lt;String, String, String&gt; {
+
+    <span style="color: navy; font-weight: bold;">private </span>ProgressDialog <span style="color: #660e7a; font-weight: bold;">dialog</span>;
+    <span style="color: navy; font-weight: bold;">private </span>String <span style="color: #660e7a; font-weight: bold;">message</span>;
+    <span style="color: navy; font-weight: bold;">private </span>Context <span style="color: #660e7a; font-weight: bold;">context</span>;
+    <span style="color: navy; font-weight: bold;">private </span>OnGetCallComplete <span style="color: #660e7a; font-weight: bold;">ongetcallcomplete</span>;
+
+    <span style="color: navy; font-weight: bold;">public </span>MyClientGet(Context ctx, String progressMessage, OnGetCallComplete&nbsp;</pre>
+<pre style="background-color: white; color: black; font-family: 'Courier New'; font-size: 9.0pt;">onGetCallComplete) {
+        <span style="color: #660e7a; font-weight: bold;">message </span>= progressMessage;
+        <span style="color: navy; font-weight: bold;">this</span>.<span style="color: #660e7a; font-weight: bold;">context </span>= ctx;
+        <span style="color: navy; font-weight: bold;">this</span>.<span style="color: #660e7a; font-weight: bold;">ongetcallcomplete </span>= onGetCallComplete;
+        <span style="color: navy; font-weight: bold;">if </span>(!(<span style="color: #660e7a; font-weight: bold;">message</span>.equals(<span style="color: green; font-weight: bold;">""</span>))) {
+            <span style="color: #660e7a; font-weight: bold;">dialog </span>= <span style="color: navy; font-weight: bold;">new </span>ProgressDialog(ctx);
+            <span style="color: #660e7a; font-weight: bold;">dialog</span>.setMessage(progressMessage);
+        }
+    }
+
+    <span style="color: olive;">@Override</span><span style="color: olive;">    </span><span style="color: navy; font-weight: bold;">protected void </span>onPreExecute() {
+        <span style="color: grey; font-style: italic;">// </span><span style="color: #0073bf; font-style: italic; font-weight: bold;">TODO Auto-generated method stub</span><span style="color: #0073bf; font-style: italic; font-weight: bold;">        </span><span style="color: navy; font-weight: bold;">super</span>.onPreExecute();
+        <span style="color: navy; font-weight: bold;">if </span>(!(<span style="color: #660e7a; font-weight: bold;">message</span>.equals(<span style="color: green; font-weight: bold;">""</span>))) {
+            <span style="color: #660e7a; font-weight: bold;">dialog</span>.setCancelable(<span style="color: navy; font-weight: bold;">false</span>);
+            <span style="color: #660e7a; font-weight: bold;">dialog</span>.show();
+        }
+    }
+
+    <span style="color: olive;">@Override</span><span style="color: olive;">    </span><span style="color: navy; font-weight: bold;">protected </span>String doInBackground(String... params) {
+        <span style="color: grey; font-style: italic;">// </span><span style="color: #0073bf; font-style: italic; font-weight: bold;">TODO Auto-generated method stub</span><span style="color: #0073bf; font-style: italic; font-weight: bold;">        </span>String result = <span style="color: navy; font-weight: bold;">null</span>;
+        <span style="color: navy; font-weight: bold;">if </span>(!isCancelled()) {
+            String serverurl = params[<span style="color: blue;">0</span>];
+            result = Utils.<span style="font-style: italic;">NetworkOperation</span>(serverurl);
+        }
+        <span style="color: navy; font-weight: bold;">return </span>result;
+    }
+
+    <span style="color: olive;">@Override</span><span style="color: olive;">    </span><span style="color: navy; font-weight: bold;">protected void </span>onPostExecute(String result) {
+        <span style="color: grey; font-style: italic;">// </span><span style="color: #0073bf; font-style: italic; font-weight: bold;">TODO Auto-generated method stub</span><span style="color: #0073bf; font-style: italic; font-weight: bold;">        </span><span style="color: navy; font-weight: bold;">super</span>.onPostExecute(result);
+        <span style="color: navy; font-weight: bold;">if </span>(!(<span style="color: #660e7a; font-weight: bold;">message</span>.equals(<span style="color: green; font-weight: bold;">""</span>))) {
+            <span style="color: navy; font-weight: bold;">if </span>(<span style="color: #660e7a; font-weight: bold;">dialog </span>!= <span style="color: navy; font-weight: bold;">null</span>) {
+                <span style="color: #660e7a; font-weight: bold;">dialog</span>.hide();
+                <span style="color: #660e7a; font-weight: bold;">dialog</span>.dismiss();
+            }
+        }
+        <span style="color: #660e7a; font-weight: bold;">ongetcallcomplete</span>.response(result);
+    }
+
+    <span style="color: navy; font-weight: bold;">protected void </span>onProgressUpdate(String... progress) {
+    }
+
+    <span style="color: navy; font-weight: bold;">public interface </span>OnGetCallComplete {
+        <span style="color: navy; font-weight: bold;">public void </span>response(String result);
+    }
+}</pre>
+</div>

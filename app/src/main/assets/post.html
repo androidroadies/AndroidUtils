@@ -1,0 +1,111 @@
+<div dir="ltr" style="text-align: left;" trbidi="on">
+<pre style="background-color: white; color: black; font-family: 'Courier New'; font-size: 9.0pt;"><span style="color: grey; font-style: italic;">/**</span><span style="color: grey; font-style: italic;"> * This is used for post data from API.</span><span style="color: grey; font-style: italic;"> *</span><span style="color: grey; font-style: italic;">&nbsp;</span></pre>
+<pre style="background-color: white; color: black; font-family: 'Courier New'; font-size: 9.0pt;"><span style="color: grey; font-style: italic;">* </span><span style="color: grey; font-style: italic; font-weight: bold;">@author </span><span style="color: grey; font-style: italic;">Mayank</span><span style="color: grey; font-style: italic;"> *</span></pre>
+<pre style="background-color: white; color: black; font-family: 'Courier New'; font-size: 9.0pt;"><span style="color: grey; font-style: italic;">&nbsp;</span><span style="color: grey; font-style: italic; font-weight: bold;">@since </span><span style="color: grey; font-style: italic;">1.4</span><span style="color: grey; font-style: italic;"> */</span></pre>
+<pre style="background-color: white; color: black; font-family: 'Courier New'; font-size: 9.0pt;"><span style="color: grey; font-style: italic;">&nbsp;</span></pre>
+<pre style="background-color: white; color: black; font-family: 'Courier New'; font-size: 9.0pt;"><span style="color: grey; font-style: italic;">&nbsp;</span><span style="color: navy; font-weight: bold;">public class </span>MyClientPost <span style="color: navy; font-weight: bold;">extends </span>AsyncTask&lt;Map&lt;String, Object&gt;, String, String&gt; {
+
+    <span style="color: navy; font-weight: bold;">public </span>ProgressDialog <span style="color: #660e7a; font-weight: bold;">dialog</span>;
+    <span style="color: navy; font-weight: bold;">private </span>String <span style="color: #660e7a; font-weight: bold;">message</span>;
+    <span style="color: navy; font-weight: bold;">private </span>Context <span style="color: #660e7a; font-weight: bold;">context</span>;
+    <span style="color: navy; font-weight: bold;">private </span>OnPostCallComplete <span style="color: #660e7a; font-weight: bold;">onpostcallcomplete</span>;
+    <span style="color: navy; font-weight: bold;">private </span>JSONObject <span style="color: #660e7a; font-weight: bold;">jsonResult</span>;
+
+    <span style="color: navy; font-weight: bold;">public </span>MyClientPost(Context context, String progressMessage, OnPostCallComplete</pre>
+<pre style="background-color: white; color: black; font-family: 'Courier New'; font-size: 9.0pt;">&nbsp;onPostCallComplete2) {
+        <span style="color: #660e7a; font-weight: bold;">message </span>= progressMessage;
+        <span style="color: navy; font-weight: bold;">this</span>.<span style="color: #660e7a; font-weight: bold;">context </span>= context;
+        <span style="color: navy; font-weight: bold;">this</span>.<span style="color: #660e7a; font-weight: bold;">onpostcallcomplete </span>= onPostCallComplete2;
+
+        <span style="color: navy; font-weight: bold;">if </span>(!(<span style="color: #660e7a; font-weight: bold;">message</span>.equals(<span style="color: green; font-weight: bold;">""</span>))) {
+            <span style="color: #660e7a; font-weight: bold;">dialog </span>= <span style="color: navy; font-weight: bold;">new </span>ProgressDialog(context);
+            <span style="color: #660e7a; font-weight: bold;">dialog</span>.setMessage(progressMessage);
+        }
+    }
+
+    <span style="color: olive;">@Override</span><span style="color: olive;">    </span><span style="color: navy; font-weight: bold;">protected void </span>onPreExecute() {
+        <span style="color: grey; font-style: italic;">// </span><span style="color: #0073bf; font-style: italic; font-weight: bold;">TODO Auto-generated method stub</span><span style="color: #0073bf; font-style: italic; font-weight: bold;">        </span><span style="color: navy; font-weight: bold;">super</span>.onPreExecute();
+        <span style="color: navy; font-weight: bold;">if </span>(!(<span style="color: #660e7a; font-weight: bold;">message</span>.equals(<span style="color: green; font-weight: bold;">""</span>))) {
+            <span style="color: #660e7a; font-weight: bold;">dialog</span>.setCancelable(<span style="color: navy; font-weight: bold;">false</span>);
+            <span style="color: #660e7a; font-weight: bold;">dialog</span>.show();
+        }
+    }
+
+    <span style="color: olive;">@Override</span><span style="color: olive;">    </span><span style="color: navy; font-weight: bold;">protected </span>String doInBackground(Map&lt;String, Object&gt;... params) {
+        String result = <span style="color: navy; font-weight: bold;">null</span>;
+
+        <span style="color: navy; font-weight: bold;">if </span>(!isCancelled()) {
+
+            Map&lt;String, Object&gt; passed_params = params[<span style="color: blue;">0</span>];
+            <span style="color: grey; font-style: italic;">// API call URL</span><span style="color: grey; font-style: italic;">            </span>String serverUrl = (String) passed_params.get(<span style="color: green; font-weight: bold;">"url"</span>);
+            Log.<span style="font-style: italic;">v</span>(Utils.<span style="color: #660e7a; font-style: italic; font-weight: bold;">TAG</span>, <span style="color: green; font-weight: bold;">"API url: " </span>+ serverUrl);
+            <span style="color: grey; font-style: italic;">// parameter data to send</span><span style="color: grey; font-style: italic;">            </span><span style="color: olive;">@SuppressWarnings</span>(<span style="color: green; font-weight: bold;">"unchecked"</span>)
+            Map&lt;String, String&gt; methodParameter = (Map&lt;String, String&gt;)</pre>
+<pre style="background-color: white; color: black; font-family: 'Courier New'; font-size: 9.0pt;">&nbsp;passed_params.get(<span style="color: green; font-weight: bold;">"method_parameters"</span>);
+            <span style="color: navy; font-weight: bold;">try </span>{
+                HttpClient client = <span style="color: navy; font-weight: bold;">new </span>DefaultHttpClient();
+                HttpPost post = <span style="color: navy; font-weight: bold;">new </span>HttpPost(serverUrl);
+
+                Iterator&lt;Entry&lt;String, String&gt;&gt; iterator = methodParameter.entrySet()</pre>
+<pre style="background-color: white; color: black; font-family: 'Courier New'; font-size: 9.0pt;">.iterator();
+                List&lt;NameValuePair&gt; nameValuePairs = <span style="color: navy; font-weight: bold;">new </span>ArrayList&lt;NameValuePair&gt;</pre>
+<pre style="background-color: white; color: black; font-family: 'Courier New'; font-size: 9.0pt;">(methodParameter.size());
+                <span style="color: navy; font-weight: bold;">while </span>(iterator.hasNext()) {
+                    Entry&lt;String, String&gt; param = iterator.next();
+                    nameValuePairs.add(<span style="color: navy; font-weight: bold;">new </span>BasicNameValuePair(param.getKey(),&nbsp;</pre>
+<pre style="background-color: white; color: black; font-family: 'Courier New'; font-size: 9.0pt;">param.getValue()));
+                }
+                Log.<span style="font-style: italic;">v</span>(Utils.<span style="color: #660e7a; font-style: italic; font-weight: bold;">TAG</span>, <span style="color: green; font-weight: bold;">"post latlng " </span>+ nameValuePairs.toString());
+                UrlEncodedFormEntity entity = <span style="color: navy; font-weight: bold;">new </span>UrlEncodedFormEntity(nameValuePairs);
+                post.setEntity(entity);
+                HttpResponse response = client.execute(post);
+                HttpEntity resp_entity = response.getEntity();
+                result = EntityUtils.<span style="font-style: italic;">toString</span>(resp_entity);
+                <span style="color: grey; font-style: italic;">// System.out.println("result in post 80: "+result);</span><span style="color: grey; font-style: italic;">                </span><span style="color: navy; font-weight: bold;">if </span>(response.getStatusLine().getStatusCode() != <span style="color: blue;">200</span>) {
+                    Log.<span style="font-style: italic;">v</span>(Utils.<span style="color: #660e7a; font-style: italic; font-weight: bold;">TAG</span>, <span style="color: green; font-weight: bold;">"post  status code " </span>+ response.getStatusLine()</pre>
+<pre style="background-color: white; color: black; font-family: 'Courier New'; font-size: 9.0pt;">.getStatusCode());
+                    <span style="color: #660e7a; font-weight: bold;">jsonResult </span>= <span style="color: navy; font-weight: bold;">new </span>JSONObject();
+                    <span style="color: #660e7a; font-weight: bold;">jsonResult</span>.put(<span style="color: green; font-weight: bold;">"response_code"</span>, <span style="color: green; font-weight: bold;">"9999"</span>);
+                    <span style="color: #660e7a; font-weight: bold;">jsonResult</span>.put(<span style="color: green; font-weight: bold;">"response_message"</span>, <span style="color: green; font-weight: bold;">"85 Server error occurred while&nbsp;</span></pre>
+<pre style="background-color: white; color: black; font-family: 'Courier New'; font-size: 9.0pt;"><span style="color: green; font-weight: bold;">processing request. Please try again."</span>);
+                    result = <span style="color: #660e7a; font-weight: bold;">jsonResult</span>.toString();
+                    <span style="color: navy; font-weight: bold;">return </span>result;
+                }
+            } <span style="color: navy; font-weight: bold;">catch </span>(Exception e) {
+                Log.<span style="font-style: italic;">v</span>(Utils.<span style="color: #660e7a; font-style: italic; font-weight: bold;">TAG</span>, <span style="color: green; font-weight: bold;">"post exception " </span>+ e.getMessage());
+                <span style="color: navy; font-weight: bold;">try </span>{
+                    <span style="color: #660e7a; font-weight: bold;">jsonResult </span>= <span style="color: navy; font-weight: bold;">new </span>JSONObject();
+                    <span style="color: #660e7a; font-weight: bold;">jsonResult</span>.put(<span style="color: green; font-weight: bold;">"response_code"</span>, <span style="color: green; font-weight: bold;">"9999"</span>);
+                    <span style="color: #660e7a; font-weight: bold;">jsonResult</span>.put(<span style="color: green; font-weight: bold;">"response_message"</span>, <span style="color: green; font-weight: bold;">"94 Server error occurred while&nbsp;</span></pre>
+<pre style="background-color: white; color: black; font-family: 'Courier New'; font-size: 9.0pt;"><span style="color: green; font-weight: bold;">processing request. Please try again."</span>);
+                    result = <span style="color: #660e7a; font-weight: bold;">jsonResult</span>.toString();
+                    <span style="color: navy; font-weight: bold;">return </span>result;
+                } <span style="color: navy; font-weight: bold;">catch </span>(JSONException jsone) {
+                    jsone.printStackTrace();
+                }
+            }
+        }
+        <span style="color: grey; font-style: italic;">//System.out.println("result in post: "+result);</span><span style="color: grey; font-style: italic;">        </span><span style="color: navy; font-weight: bold;">return </span>result;
+    }
+
+    <span style="color: olive;">@Override</span><span style="color: olive;">    </span><span style="color: navy; font-weight: bold;">protected void </span>onPostExecute(String result) {
+        <span style="color: grey; font-style: italic;">// </span><span style="color: #0073bf; font-style: italic; font-weight: bold;">TODO Auto-generated method stub</span><span style="color: #0073bf; font-style: italic; font-weight: bold;">        </span><span style="color: navy; font-weight: bold;">super</span>.onPostExecute(result);
+        <span style="color: navy; font-weight: bold;">if </span>(!(<span style="color: #660e7a; font-weight: bold;">message</span>.equals(<span style="color: green; font-weight: bold;">""</span>))) {
+            <span style="color: navy; font-weight: bold;">if </span>(<span style="color: #660e7a; font-weight: bold;">dialog </span>!= <span style="color: navy; font-weight: bold;">null</span>) {
+                <span style="color: #660e7a; font-weight: bold;">dialog</span>.hide();
+                <span style="color: #660e7a; font-weight: bold;">dialog</span>.dismiss();
+            }
+        }
+        System.<span style="color: #660e7a; font-style: italic; font-weight: bold;">out</span>.println(<span style="color: green; font-weight: bold;">"result in onPostExecute: " </span>+ result);
+        <span style="color: navy; font-weight: bold;">try </span>{
+            <span style="color: #660e7a; font-weight: bold;">onpostcallcomplete</span>.response(result);
+        } <span style="color: navy; font-weight: bold;">catch </span>(JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    <span style="color: navy; font-weight: bold;">public interface </span>OnPostCallComplete {
+        <span style="color: navy; font-weight: bold;">public void </span>response(String result) <span style="color: navy; font-weight: bold;">throws </span>JSONException;
+    }
+}</pre>
+</div>
