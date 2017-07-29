@@ -5,8 +5,8 @@ android {
     buildToolsVersion "23.0.3"
 
     defaultConfig {
-        applicationId "com.common.utils"
-        minSdkVersion 10
+        applicationId "com.common"
+        minSdkVersion 15
         targetSdkVersion 25
     }
 
@@ -38,4 +38,14 @@ dependencies {
     compile "pub.devrel:easypermissions:$EASY_PERMISSIONS_VERSION"
 
     compile project(':simplecropimagelib')
+
+    final LEAKCANARY_VERSION = '1.5';
+
+    def leakCanary = "com.squareup.leakcanary:leakcanary-android-no-op:$LEAKCANARY_VERSION"
+
+    // LeakCanary
+    debugCompile "com.squareup.leakcanary:leakcanary-android:$LEAKCANARY_VERSION"
+    releaseCompile leakCanary
+    testCompile leakCanary
+    compile project(path: ':utilcode')
 }

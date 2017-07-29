@@ -26,6 +26,7 @@ public class HomeActivity extends Activity {
 
         TextView txtDemo = (TextView) findViewById(R.id.txtDemo);
         TextView txtCodeSnip = (TextView) findViewById(R.id.txtCodeSnip);
+        TextView txtUtilsCode = (TextView) findViewById(R.id.txtUtilsCode);
         TextView txtMaterialLibrary = (TextView) findViewById(R.id.txtMaterialLibrary);
 
         txtDemo.setOnClickListener(new View.OnClickListener() {
@@ -40,6 +41,14 @@ public class HomeActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intcode = new Intent(mContext, CodeSnippestHomeActivity.class);
+                startActivity(intcode);
+            }
+        });
+
+        txtUtilsCode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intcode = new Intent(mContext, com.common.activity.MainActivity.class);
                 startActivity(intcode);
             }
         });

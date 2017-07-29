@@ -9,7 +9,6 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <!-- get location -->
     <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_GPS"/>
@@ -25,7 +24,33 @@
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
 
+
+    <!--&lt;!&ndash;flashlight&ndash;&gt;-->
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camer/a.autofocus"/>
+    <uses-feature android:name="android.hardware.camera.flash"/>
+
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+
+
+    <!--&lt;!&ndash;network&ndash;&gt;-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!--&lt;!&ndash;<uses-permission android:name="android.permission.MODIFY_PHONE_STATE"/>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;phone&ndash;&gt;-->
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+
+    <!--&lt;!&ndash;process&ndash;&gt;-->
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+
     <application
+        android:name="com.common.UtilsApp"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
@@ -206,11 +231,50 @@
 
         <activity android:name="eu.janmuller.android.simplecropimage.CropImage"/>
 
+        <!--Utils Code-->
+        <activity android:name="com.common.activity.ActivityActivity"/>
+        <activity android:name="com.common.activity.AppActivity"/>
+        <activity android:name="com.common.activity.CleanActivity"/>
+        <activity android:name="com.common.activity.DeviceActivity"/>
+        <activity android:name="com.common.activity.FragmentActivity"/>
+        <!--<activity android:name=".activities.FlashlightActivity"/>-->
+        <activity android:name="com.common.activity.HandlerActivity"/>
+        <activity android:name="com.common.activity.ImageActivity"/>
+        <activity
+            android:name="com.common.activity.KeyboardActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity android:name="com.common.activity.LocationActivity"/>
+        <activity android:name="com.common.activity.LogActivity"/>
+        <activity android:name="com.common.activity.MainActivity">
+        </activity>
+        <activity android:name="com.common.activity.NetworkActivity"/>
+        <!--<activity android:name=".activities.PermissionActivity"/>-->
+        <activity android:name="com.common.activity.PhoneActivity"/>
+        <activity android:name="com.common.activity.PinyinActivity"/>
+        <activity android:name="com.common.activity.ProcessActivity"/>
+        <activity android:name="com.common.activity.SDCardActivity"/>
+        <activity android:name="com.common.activity.SnackbarActivity"/>
+        <activity android:name="com.common.activity.SpannableActivity"/>
+        <activity android:name="com.common.activity.ToastActivity"/>
+
+        <service android:name="com.common.service.LocationService"/>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.common.utils"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
         <provider
             android:name=".InternalStorageContentProvider"
             android:authorities="com.common.utils"
             android:exported="true"
             tools:ignore="ExportedContentProvider" />
+
+
     </application>
 
 </manifest>

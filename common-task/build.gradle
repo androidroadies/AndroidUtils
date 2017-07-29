@@ -54,8 +54,8 @@ dependencies {
 //#################################### Bintray ####################################//
 if (project.rootProject.file('local.properties').exists()) {
 
-def siteUrl = 'https://github.com/multidots/android-app-common-tasks/'        // Homepage URL of the library
-def gitUrl = 'https://github.com/multidots/android-app-common-tasks.git'      // Git repository URL
+def siteUrl = 'https://github.com/androidroadies/AndroidUtilCode/'        // Homepage URL of the library
+def gitUrl = 'https://github.com/androidroadies/AndroidUtils.git'      // Git repository URL
 
 group = "com.multidots"
 

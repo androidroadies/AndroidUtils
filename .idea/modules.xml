@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/common-task/common-task.iml" filepath="$PROJECT_DIR$/common-task/common-task.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraryXmpp/libraryXmpp.iml" filepath="$PROJECT_DIR$/libraryXmpp/libraryXmpp.iml" />
       <module fileurl="file://$PROJECT_DIR$/simplecropimagelib/simplecropimagelib.iml" filepath="$PROJECT_DIR$/simplecropimagelib/simplecropimagelib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/utilcode/utilcode.iml" filepath="$PROJECT_DIR$/utilcode/utilcode.iml" />
     </modules>
   </component>
 </project>

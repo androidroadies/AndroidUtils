@@ -702,9 +702,9 @@ Utils.init(context);
 ## Proguard
 
 ```
--keep class com.androidroadies.utilcode.** { *; }
--keepclassmembers class com.androidroadies.utilcode.** { *; }
--dontwarn com.androidroadies.utilcode.**
+-keep class com.common.utilcode.** { *; }
+-keepclassmembers class com.common.utilcode.** { *; }
+-dontwarn com.common.utilcode.**
 ```
 
 

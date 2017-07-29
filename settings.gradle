@@ -1,1 +1,1 @@
-include ':common-task', ':simplecropimagelib', ':app', ':libraryXmpp'
+include ':common-task', ':simplecropimagelib', ':app', ':libraryXmpp', ':utilcode'
