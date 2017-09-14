@@ -24,9 +24,9 @@ public class XmppConstants {
     }
 
     public interface CONFIGURATION {
-        String XMPP_HOST = "52.66.190.52";
-        String XMPP_SERVER_NAME = "ip-172-31-15-43.ap-south-1.compute.internal";
-        String XMPP_CONFERENCE_NAME = "conference.ip-172-31-15-43.ap-south-1.compute.internal ";
+        String XMPP_HOST = "";
+        String XMPP_SERVER_NAME = "";
+        String XMPP_CONFERENCE_NAME = "";
         int XMPP_PORT = 5222;
         boolean XMPP_DEBUGGER_ENABLED = true;
         ConnectionConfiguration.SecurityMode SECURITY_MODE = ConnectionConfiguration.SecurityMode.disabled;
