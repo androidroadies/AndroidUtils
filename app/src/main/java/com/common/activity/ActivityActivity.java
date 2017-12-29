@@ -9,7 +9,6 @@ import com.common.utilcode.util.ActivityUtils;
 import com.common.Config;
 import com.common.base.BaseActivity;
 import com.common.utils.R;
-
 public class ActivityActivity extends BaseActivity {
 
     private String imageActivityClassName;
